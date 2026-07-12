@@ -44,3 +44,8 @@ If your project uses standard static files, you can open `index.html` directly i
 ## Development
 
 This project is developed as an AI Capstone project to practice AI-assisted frontend development using modern tools.
+## Future Improvements
+
+- Add more AI-powered features.
+- Improve user interface design.
+- Connect with AI APIs.
