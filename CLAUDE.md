@@ -17,3 +17,8 @@ AI Capstone
 - Add comments when needed.
 - Use meaningful variable names.
 - Follow best coding practices.
+## AI Assistance Rules
+
+- Review code before making changes.
+- Explain the reason behind suggestions.
+- Keep the project beginner-friendly.

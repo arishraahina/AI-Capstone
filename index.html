@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Settings | AI Capstone Dashboard</title>
+  <meta name="description" content="Manage your AI Capstone account profile and personal settings.">
+  <!-- Google Fonts: Inter and Outfit -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Background Glow Accents -->
+  <div class="glow-accent glow-top-left"></div>
+  <div class="glow-accent glow-bottom-right"></div>
+
+  <div class="app-container">
+    
+    <!-- Sidebar Navigation -->
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-header">
+        <div class="logo">
+          <svg class="logo-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
+            <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
+            <line x1="12" y1="22.08" x2="12" y2="12"></line>
+          </svg>
+          <span class="logo-text">AI Capstone</span>
+        </div>
+        <button class="mobile-close-btn" id="mobileCloseBtn" aria-label="Close menu">
+          <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+      
+      <nav class="sidebar-nav">
+        <ul>
+          <li>
+            <a href="#" class="nav-item">
+              <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="3" y="3" width="7" height="9" rx="1"></rect>
+                <rect x="14" y="3" width="7" height="5" rx="1"></rect>
+                <rect x="14" y="12" width="7" height="9" rx="1"></rect>
+                <rect x="3" y="16" width="7" height="5" rx="1"></rect>
+              </svg>
+              <span>Overview</span>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="nav-item">
+              <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                <circle cx="12" cy="7" r="4"></circle>
+              </svg>
+              <span>Profile</span>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="nav-item active">
+              <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="3"></circle>
+                <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"></path>
+              </svg>
+              <span>Settings</span>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="nav-item">
+              <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+              </svg>
+              <span>Security</span>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="nav-item">
+              <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path>
+                <path d="M13.73 21a2 2 0 0 1-3.46 0"></path>
+              </svg>
+              <span>Notifications</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="sidebar-footer">
+        <div class="user-profile-summary">
+          <div class="profile-avatar-small" id="avatarSmall">HR</div>
+          <div class="profile-meta">
+            <span class="profile-name" id="sidebarUserName">Hiba Roshan</span>
+            <span class="profile-role">Admin</span>
+          </div>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Main Content Area -->
+    <main class="main-content">
+      
+      <!-- Top Header -->
+      <header class="main-header">
+        <div class="header-left">
+          <button class="mobile-toggle-btn" id="mobileToggleBtn" aria-label="Open menu">
+            <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="3" y1="12" x2="21" y2="12"></line>
+              <line x1="3" y1="6" x2="21" y2="6"></line>
+              <line x1="3" y1="18" x2="21" y2="18"></line>
+            </svg>
+          </button>
+          <div class="breadcrumbs">
+            <span class="breadcrumb-parent">Console</span>
+            <span class="breadcrumb-separator">/</span>
+            <span class="breadcrumb-active">Settings</span>
+          </div>
+        </div>
+        <div class="header-right">
+          <button class="icon-action-btn" aria-label="Notifications">
+            <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path>
+              <path d="M13.73 21a2 2 0 0 1-3.46 0"></path>
+            </svg>
+            <span class="notification-indicator"></span>
+          </button>
+        </div>
+      </header>
+
+      <!-- Content Container -->
+      <div class="content-body">
+        
+        <div class="settings-title-section">
+          <h1>Account Settings</h1>
+          <p>Manage your account settings, update your details, and configure validation preferences.</p>
+        </div>
+
+        <div class="settings-card">
+          <div class="settings-card-header">
+            <h2>Personal Information</h2>
+            <p>Update your personal details. Red asterisk symbols (<span class="required-indicator">*</span>) mark required inputs.</p>
+          </div>
+
+          <div class="settings-card-body">
+            
+            <!-- Profile Photo Section (Aesthetic Mock) -->
+            <div class="profile-photo-container">
+              <div class="avatar-uploader">
+                <div class="avatar-preview-wrapper">
+                  <div class="avatar-preview" id="avatarPreview">HR</div>
+                  <div class="avatar-overlay">
+                    <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path>
+                      <circle cx="12" cy="13" r="4"></circle>
+                    </svg>
+                  </div>
+                </div>
+                <div class="avatar-info">
+                  <h3>Your Avatar</h3>
+                  <p>PNG or JPG. Max 2MB.</p>
+                  <button type="button" class="btn btn-secondary btn-sm" id="changeAvatarBtn">Change Photo</button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Settings Form -->
+            <form id="settingsForm" class="settings-form" novalidate>
+              
+              <!-- Name Input Group -->
+              <div class="input-group" id="group-name">
+                <div class="label-wrapper">
+                  <label for="input-name">Full Name <span class="required-indicator">*</span></label>
+                </div>
+                <div class="input-wrapper">
+                  <span class="input-icon-wrapper">
+                    <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                      <circle cx="12" cy="7" r="4"></circle>
+                    </svg>
+                  </span>
+                  <input 
+                    type="text" 
+                    id="input-name" 
+                    name="name" 
+                    placeholder="Enter your full name" 
+                    required 
+                    autocomplete="name"
+                    class="form-control"
+                    aria-describedby="error-name"
+                  >
+                  <span class="validation-status-icon"></span>
+                </div>
+                <div class="error-message" id="error-name" aria-live="polite">
+                  <svg class="error-icon" viewBox="0 0 24 24" width="14" height="14" stroke="currentColor" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <line x1="12" y1="8" x2="12" y2="12"></line>
+                    <line x1="12" y1="16" x2="12.01" y2="16"></line>
+                  </svg>
+                  <span class="error-text">Name is required.</span>
+                </div>
+              </div>
+
+              <!-- Email Input Group -->
+              <div class="input-group" id="group-email">
+                <div class="label-wrapper">
+                  <label for="input-email">Email Address <span class="required-indicator">*</span></label>
+                </div>
+                <div class="input-wrapper">
+                  <span class="input-icon-wrapper">
+                    <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                      <polyline points="22,6 12,13 2,6"></polyline>
+                    </svg>
+                  </span>
+                  <input 
+                    type="email" 
+                    id="input-email" 
+                    name="email" 
+                    placeholder="example@domain.com" 
+                    required 
+                    autocomplete="email"
+                    class="form-control"
+                    aria-describedby="error-email"
+                  >
+                  <span class="validation-status-icon"></span>
+                </div>
+                <div class="error-message" id="error-email" aria-live="polite">
+                  <svg class="error-icon" viewBox="0 0 24 24" width="14" height="14" stroke="currentColor" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <line x1="12" y1="8" x2="12" y2="12"></line>
+                    <line x1="12" y1="16" x2="12.01" y2="16"></line>
+                  </svg>
+                  <span class="error-text">Email address is invalid.</span>
+                </div>
+              </div>
+
+              <!-- Supplementary Setting: Theme / Notifications (Enhances design premium factor) -->
+              <div class="form-section-divider"></div>
+              
+              <div class="supplementary-settings">
+                <h3>Preferences</h3>
+                
+                <div class="toggle-group">
+                  <div class="toggle-label-desc">
+                    <label for="toggle-marketing" class="toggle-title">Email Marketing</label>
+                    <span class="toggle-desc">Receive updates about new dashboard features and model releases.</span>
+                  </div>
+                  <div class="toggle-switch-wrapper">
+                    <input type="checkbox" id="toggle-marketing" class="toggle-checkbox" checked>
+                    <label for="toggle-marketing" class="toggle-switch" aria-label="Toggle Email Marketing"></label>
+                  </div>
+                </div>
+
+                <div class="toggle-group">
+                  <div class="toggle-label-desc">
+                    <label for="toggle-security" class="toggle-title">Enhanced Security</label>
+                    <span class="toggle-desc">Require verification code for critical model queries.</span>
+                  </div>
+                  <div class="toggle-switch-wrapper">
+                    <input type="checkbox" id="toggle-security" class="toggle-checkbox">
+                    <label for="toggle-security" class="toggle-switch" aria-label="Toggle Enhanced Security"></label>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Form Buttons -->
+              <div class="form-actions">
+                <button type="button" class="btn btn-secondary" id="resetBtn">Cancel</button>
+                <button type="submit" class="btn btn-primary" id="saveBtn">
+                  <span class="btn-text">Save Changes</span>
+                  <span class="spinner" aria-hidden="true"></span>
+                </button>
+              </div>
+
+            </form>
+          </div>
+        </div>
+
+      </div>
+    </main>
+
+  </div>
+
+  <!-- Toast Notification Container -->
+  <div class="toast-container" id="toastContainer" aria-live="assertive" aria-atomic="true"></div>
+
+  <!-- Main JavaScript File -->
+  <script src="script.js"></script>
+</body>
+</html>
