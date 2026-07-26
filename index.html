@@ -1,370 +1,72 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="dark" data-accent="indigo">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Settings Dashboard</title>
-  <!-- Google Fonts for Modern Typography -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <!-- Stylesheet -->
-  <link rel="stylesheet" href="style.css">
+  <title>Settings</title>
+
+  <!-- Link the external stylesheet -->
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-  <div class="app-container">
-    <!-- Header -->
-    <header class="app-header">
-      <div class="logo-area">
-        <svg class="icon icon-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          <circle cx="12" cy="12" r="10"></circle>
-          <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
-          <path d="M2 12h20"></path>
-        </svg>
-        <h1>ApexStudio</h1>
-      </div>
-      <div class="user-badge">
-        <img id="header-avatar" src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' fill='%236366f1'><circle cx='50' cy='50' r='50'/><text x='50%' y='55%' font-size='40' fill='white' font-family='sans-serif' text-anchor='middle' dominant-baseline='middle'>JD</text></svg>" alt="User Avatar" class="avatar-small">
-        <span class="user-name-display">John Doe</span>
-      </div>
-    </header>
+  <!-- Centered wrapper that holds the settings card -->
+  <main class="page-wrapper">
 
-    <!-- Main Container -->
-    <main class="dashboard-card">
-      
-      <!-- Sidebar Navigation -->
-      <aside class="sidebar">
-        <nav class="settings-nav">
-          <button class="nav-tab active" data-tab="profile" type="button">
-            <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
-              <circle cx="12" cy="7" r="4"></circle>
-            </svg>
-            <span>My Profile</span>
-          </button>
-          
-          <button class="nav-tab" data-tab="preferences" type="button">
-            <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <circle cx="12" cy="12" r="3"></circle>
-              <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"></path>
-            </svg>
-            <span>Preferences</span>
-          </button>
-          
-          <button class="nav-tab" data-tab="notifications" type="button">
-            <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path>
-              <path d="M13.73 21a2 2 0 0 1-3.46 0"></path>
-            </svg>
-            <span>Notifications</span>
-          </button>
-          
-          <button class="nav-tab" data-tab="security" type="button">
-            <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
-              <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
-            </svg>
-            <span>Security & Auth</span>
-          </button>
-        </nav>
-        <div class="sidebar-footer">
-          <p class="app-version">Version 1.2.0</p>
+    <section class="settings-card">
+
+      <!-- Card header -->
+      <div class="card-header">
+        <h1 class="card-title">Account Settings</h1>
+        <p class="card-subtitle">Update your name and email address.</p>
+      </div>
+
+      <!-- Success message, hidden by default and shown after a valid save -->
+      <div class="success-message" id="successMessage" role="status" aria-live="polite" tabindex="-1">
+        ✅ Your settings have been saved successfully.
+      </div>
+
+      <!-- novalidate turns off the browser's built-in validation bubbles,
+           since we show our own custom error messages instead -->
+      <form id="settingsForm" novalidate>
+
+        <!-- Name field -->
+        <div class="form-group">
+          <label for="nameInput">Full Name <span class="required-star">*</span></label>
+          <input
+            type="text"
+            id="nameInput"
+            name="name"
+            placeholder="Enter your full name"
+            autocomplete="name"
+          >
+          <!-- Error text shows only when validation fails -->
+          <p class="error-text" id="nameErrorText"></p>
         </div>
-      </aside>
 
-      <!-- Settings Forms Area -->
-      <div class="settings-content">
-        <form id="settings-form" novalidate>
-          
-          <!-- Profile Settings Panel -->
-          <section class="settings-panel active" id="panel-profile">
-            <div class="panel-header">
-              <h2>My Profile</h2>
-              <p>Manage your public profile details and avatar.</p>
-            </div>
-            
-            <div class="panel-body">
-              <!-- Avatar Upload/Selector Grid -->
-              <div class="form-group avatar-selection-group">
-                <label>Profile Avatar</label>
-                <div class="avatar-selector">
-                  <div class="current-avatar-container">
-                    <img id="profile-avatar-preview" src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' fill='%236366f1'><circle cx='50' cy='50' r='50'/><text x='50%' y='55%' font-size='40' fill='white' font-family='sans-serif' text-anchor='middle' dominant-baseline='middle'>JD</text></svg>" alt="Current Avatar">
-                  </div>
-                  <div class="avatar-options-grid">
-                    <!-- Preset avatars (using SVG data URIs with different colors/initials) -->
-                    <button type="button" class="avatar-option active" data-avatar="indigo" aria-label="Indigo Avatar">
-                      <span class="color-dot indigo-bg"></span>
-                    </button>
-                    <button type="button" class="avatar-option" data-avatar="emerald" aria-label="Emerald Avatar">
-                      <span class="color-dot emerald-bg"></span>
-                    </button>
-                    <button type="button" class="avatar-option" data-avatar="rose" aria-label="Rose Avatar">
-                      <span class="color-dot rose-bg"></span>
-                    </button>
-                    <button type="button" class="avatar-option" data-avatar="amber" aria-label="Amber Avatar">
-                      <span class="color-dot amber-bg"></span>
-                    </button>
-                    <button type="button" class="avatar-option" data-avatar="violet" aria-label="Violet Avatar">
-                      <span class="color-dot violet-bg"></span>
-                    </button>
-                  </div>
-                </div>
-              </div>
+        <!-- Email field -->
+        <div class="form-group">
+          <label for="emailInput">Email Address <span class="required-star">*</span></label>
+          <input
+            type="email"
+            id="emailInput"
+            name="email"
+            placeholder="Enter your email address"
+            autocomplete="email"
+          >
+          <p class="error-text" id="emailErrorText"></p>
+        </div>
 
-              <!-- Username input -->
-              <div class="form-group">
-                <label for="input-username">Username</label>
-                <div class="input-wrapper">
-                  <input type="text" id="input-username" name="username" placeholder="johndoe" required minlength="3" maxlength="20">
-                  <svg class="input-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
-                </div>
-                <div class="error-msg" id="error-username">Username must be between 3 and 20 characters.</div>
-              </div>
+        <!-- Save button -->
+        <button type="submit" class="save-button">Save Changes</button>
 
-              <!-- Email input -->
-              <div class="form-group">
-                <label for="input-email">Email Address</label>
-                <div class="input-wrapper">
-                  <input type="email" id="input-email" name="email" placeholder="john.doe@example.com" required>
-                  <svg class="input-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
-                </div>
-                <div class="error-msg" id="error-email">Please enter a valid email address.</div>
-              </div>
+      </form>
 
-              <!-- Bio Textarea -->
-              <div class="form-group">
-                <label for="input-bio">Bio</label>
-                <div class="input-wrapper">
-                  <textarea id="input-bio" name="bio" placeholder="Tell us about yourself..." maxlength="160"></textarea>
-                </div>
-                <div class="input-counter"><span id="bio-char-count">0</span> / 160</div>
-              </div>
-            </div>
-          </section>
+    </section>
 
-          <!-- Preferences Settings Panel -->
-          <section class="settings-panel" id="panel-preferences">
-            <div class="panel-header">
-              <h2>Preferences</h2>
-              <p>Configure interface styling, language, and layout density.</p>
-            </div>
-            
-            <div class="panel-body">
-              <!-- Dark Mode / Theme Selector Toggle -->
-              <div class="form-group theme-toggle-group">
-                <div class="toggle-text">
-                  <label>Interface Theme</label>
-                  <p class="field-desc">Toggle between Light and Dark visual modes.</p>
-                </div>
-                <div class="theme-switch-container">
-                  <input type="checkbox" id="theme-mode-checkbox" class="sr-only">
-                  <label for="theme-mode-checkbox" class="theme-switch-label">
-                    <span class="theme-icon light-icon">
-                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
-                    </span>
-                    <span class="theme-icon dark-icon">
-                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
-                    </span>
-                    <span class="theme-slider-thumb"></span>
-                  </label>
-                </div>
-              </div>
+  </main>
 
-              <!-- Accent Color Preset Picker -->
-              <div class="form-group">
-                <label>Accent Color</label>
-                <p class="field-desc">Choose a primary focus color for the interface.</p>
-                <div class="accent-picker">
-                  <button type="button" class="accent-btn active" data-accent="indigo" style="--accent-btn-color: #6366f1;" aria-label="Indigo Accent"></button>
-                  <button type="button" class="accent-btn" data-accent="emerald" style="--accent-btn-color: #10b981;" aria-label="Emerald Accent"></button>
-                  <button type="button" class="accent-btn" data-accent="rose" style="--accent-btn-color: #f43f5e;" aria-label="Rose Accent"></button>
-                  <button type="button" class="accent-btn" data-accent="amber" style="--accent-btn-color: #f59e0b;" aria-label="Amber Accent"></button>
-                  <button type="button" class="accent-btn" data-accent="violet" style="--accent-btn-color: #8b5cf6;" aria-label="Violet Accent"></button>
-                </div>
-              </div>
-
-              <!-- Language Select dropdown -->
-              <div class="form-group">
-                <label for="select-lang">Language Preference</label>
-                <div class="select-wrapper">
-                  <select id="select-lang" name="language">
-                    <option value="en">English (US)</option>
-                    <option value="es">Español (ES)</option>
-                    <option value="fr">Français (FR)</option>
-                    <option value="de">Deutsch (DE)</option>
-                    <option value="ja">日本語 (JP)</option>
-                  </select>
-                  <svg class="select-arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
-                </div>
-              </div>
-
-              <!-- Layout Density Radio Buttons -->
-              <div class="form-group">
-                <label>Layout Density</label>
-                <div class="radio-group-cards">
-                  <label class="radio-card">
-                    <input type="radio" name="density" value="comfortable" checked>
-                    <span class="radio-card-body">
-                      <span class="radio-title">Comfortable</span>
-                      <span class="radio-desc">Generous spacing, easy for scan-reading.</span>
-                    </span>
-                  </label>
-                  <label class="radio-card">
-                    <input type="radio" name="density" value="compact">
-                    <span class="radio-card-body">
-                      <span class="radio-title">Compact</span>
-                      <span class="radio-desc">Tight layout, view more data on-screen.</span>
-                    </span>
-                  </label>
-                </div>
-              </div>
-            </div>
-          </section>
-
-          <!-- Notifications Settings Panel -->
-          <section class="settings-panel" id="panel-notifications">
-            <div class="panel-header">
-              <h2>Notification Settings</h2>
-              <p>Choose when and how you want to be notified.</p>
-            </div>
-            
-            <div class="panel-body">
-              <!-- Switch Toggles -->
-              <div class="settings-switch-list">
-                <!-- Toggle 1 -->
-                <div class="switch-row">
-                  <div class="switch-info">
-                    <label for="toggle-email">Email Notifications</label>
-                    <p class="field-desc">Receive security alerts, reports, and digests via email.</p>
-                  </div>
-                  <label class="switch-control">
-                    <input type="checkbox" id="toggle-email" name="notifyEmail" checked>
-                    <span class="switch-slider"></span>
-                  </label>
-                </div>
-                
-                <!-- Toggle 2 -->
-                <div class="switch-row">
-                  <div class="switch-info">
-                    <label for="toggle-push">Push Notifications</label>
-                    <p class="field-desc">Display desktop popups for direct messages and system alerts.</p>
-                  </div>
-                  <label class="switch-control">
-                    <input type="checkbox" id="toggle-push" name="notifyPush">
-                    <span class="switch-slider"></span>
-                  </label>
-                </div>
-
-                <!-- Toggle 3 -->
-                <div class="switch-row">
-                  <div class="switch-info">
-                    <label for="toggle-digest">Weekly Activity Digest</label>
-                    <p class="field-desc">A summaries newsletter of your account analytics on Friday evenings.</p>
-                  </div>
-                  <label class="switch-control">
-                    <input type="checkbox" id="toggle-digest" name="notifyDigest" checked>
-                    <span class="switch-slider"></span>
-                  </label>
-                </div>
-
-                <!-- Toggle 4 -->
-                <div class="switch-row">
-                  <div class="switch-info">
-                    <label for="toggle-updates">Product Updates & News</label>
-                    <p class="field-desc">Be notified of new feature updates, product improvements, and tips.</p>
-                  </div>
-                  <label class="switch-control">
-                    <input type="checkbox" id="toggle-updates" name="notifyUpdates">
-                    <span class="switch-slider"></span>
-                  </label>
-                </div>
-              </div>
-            </div>
-          </section>
-
-          <!-- Security Settings Panel -->
-          <section class="settings-panel" id="panel-security">
-            <div class="panel-header">
-              <h2>Security & Authentication</h2>
-              <p>Keep your login credentials secure and update account security preferences.</p>
-            </div>
-            
-            <div class="panel-body">
-              <!-- Password Reset Fields -->
-              <div class="password-change-block">
-                <h3>Change Password</h3>
-                <div class="form-group">
-                  <label for="input-current-pass">Current Password</label>
-                  <div class="input-wrapper">
-                    <input type="password" id="input-current-pass" name="currentPassword" placeholder="••••••••">
-                    <button type="button" class="password-toggle-btn" aria-label="Toggle Password Visibility">
-                      <svg class="pass-hide-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19m-6.72-1.07a3 3 0 1 1-4.24-4.24"></path><line x1="1" y1="1" x2="23" y2="23"></line></svg>
-                    </button>
-                  </div>
-                </div>
-
-                <div class="form-grid-2">
-                  <div class="form-group">
-                    <label for="input-new-pass">New Password</label>
-                    <div class="input-wrapper">
-                      <input type="password" id="input-new-pass" name="newPassword" placeholder="Min. 8 characters">
-                      <button type="button" class="password-toggle-btn" aria-label="Toggle Password Visibility">
-                        <svg class="pass-hide-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19m-6.72-1.07a3 3 0 1 1-4.24-4.24"></path><line x1="1" y1="1" x2="23" y2="23"></line></svg>
-                      </button>
-                    </div>
-                    <div class="error-msg" id="error-new-pass">Password must be at least 8 characters.</div>
-                  </div>
-                  
-                  <div class="form-group">
-                    <label for="input-confirm-pass">Confirm New Password</label>
-                    <div class="input-wrapper">
-                      <input type="password" id="input-confirm-pass" name="confirmPassword" placeholder="••••••••">
-                      <button type="button" class="password-toggle-btn" aria-label="Toggle Password Visibility">
-                        <svg class="pass-hide-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19m-6.72-1.07a3 3 0 1 1-4.24-4.24"></path><line x1="1" y1="1" x2="23" y2="23"></line></svg>
-                      </button>
-                    </div>
-                    <div class="error-msg" id="error-confirm-pass">Passwords do not match.</div>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Two-Factor Toggle switch -->
-              <div class="two-factor-block">
-                <div class="switch-row">
-                  <div class="switch-info">
-                    <label for="toggle-2fa">Two-Factor Authentication (2FA)</label>
-                    <p class="field-desc">Secure your account with an extra verification layer (app code / SMS).</p>
-                  </div>
-                  <label class="switch-control">
-                    <input type="checkbox" id="toggle-2fa" name="twoFactor">
-                    <span class="switch-slider"></span>
-                  </label>
-                </div>
-              </div>
-            </div>
-          </section>
-
-          <!-- Form Actions Footer -->
-          <footer class="form-actions">
-            <button type="button" id="btn-reset" class="btn-secondary">Reset Defaults</button>
-            <button type="submit" id="btn-submit" class="btn-primary">
-              <span class="btn-text">Save Changes</span>
-              <span class="btn-spinner hidden"></span>
-            </button>
-          </footer>
-
-        </form>
-      </div>
-
-    </main>
-  </div>
-
-  <!-- Toast Alert Containers -->
-  <div class="toast-container" id="toast-container"></div>
-
-  <!-- Script File -->
+  <!-- Link the external JavaScript file -->
   <script src="script.js"></script>
 </body>
 </html>
