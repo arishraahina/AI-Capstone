@@ -27,8 +27,8 @@ Follow these simple steps to run the project locally on your machine:
 
 ### 1. Clone the Repository
 ```bash
-git clone https://github.com/your-username/frontend-capstone.git
-cd frontend-capstone
+git clone https://github.com/arishraahina/AI-Capstone.git
+cd AI-Capstone
 ```
 
 ### 2. Run the Project
@@ -41,10 +41,16 @@ If your project uses standard static files, you can open `index.html` directly i
 - **Interactive Dashboard**: User-friendly input fields and panels to interact with AI models.
 - **Responsive Layout**: Works seamlessly across mobile, tablet, and desktop screens.
 - **Fast Performance**: Light weight vanilla stack ensures fast load times and clean execution.
-## Development
+
+---
+
+## 💻 Development
 
 This project is developed as an AI Capstone project to practice AI-assisted frontend development using modern tools.
-## Future Improvements
+
+---
+
+## 🔮 Future Improvements
 
 - Add more AI-powered features.
 - Improve user interface design.
